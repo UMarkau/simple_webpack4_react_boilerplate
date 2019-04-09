@@ -2,8 +2,9 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
-    template: './src/index.html',
-    filename: './index.html'
+    template: './src/public/index.html',
+    filename: './index.html',
+    favicon: './src/public/favicon.ico'
 });
 
 const CSSModuleLoader = {
