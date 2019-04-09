@@ -5,7 +5,7 @@
     },
     "parser": "babel-eslint",
     "extends": ["airbnb", "prettier"],
-    "plugins": ["prettier"],
+    "plugins": ["prettier", "react-hooks"],
     "rules": {
         "prettier/prettier": ["error"],
         "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
@@ -13,6 +13,9 @@
         "react/button-has-type": false,
         "no-shadow": "off",
         "react/forbid-prop-types": "off",
-        "react/jsx-indent": 4
+        "react/jsx-indent": 4,
+        "react/jsx-indent-props": [4, 4],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     }
 }
