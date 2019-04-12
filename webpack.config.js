@@ -28,13 +28,22 @@ const CSSLoader = {
 module.exports = {
     entry: path.resolve(__dirname, 'src/index.js'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
         filename: 'js/[name].[contenthash].js',
         publicPath: '/'
     },
     optimization: {
         splitChunks: {
             chunks: 'all'
+        }
+    },
+    resolve: {
+        alias: {
+            Pages: path.resolve(__dirname, 'src/pages'),
+            Components: path.resolve(__dirname, 'src/components'),
+            Actions: path.resolve(__dirname, 'src/store/actions'),
+            Reducers: path.resolve(__dirname, 'src/store/reducers'),
+            Images: path.resolve(__dirname, 'src/assets/images')
         }
     },
     module: {

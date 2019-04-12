@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {getCounter} from './store/reducers';
-import {counterUp, counterDown} from './store/actions';
+import slowpoke from 'Images/slowpoke.png';
+import {getCounter} from 'Reducers';
+import {counterUp, counterDown} from 'Actions';
 import styles from './App.module.scss';
-import slowpoke from './assets/images/slowpoke.png';
 
 const App = ({counter, counterUp, counterDown}) => {
     const [text] = useState('Hello from the App!');

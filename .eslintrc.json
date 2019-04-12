@@ -3,6 +3,17 @@
         "window": true,
         "document": true
     },
+    "settings": {
+        "import/resolver": {
+            "alias": [
+                ["Pages", "./src/pages"],
+                ["Components", "./src/components"],
+                ["Actions", "./src/store/actions"],
+                ["Reducers", "./src/store/reducers"],
+                ["Images", "./src/assets/images"]
+            ]
+        }
+    },
     "parser": "babel-eslint",
     "extends": ["airbnb", "prettier"],
     "plugins": ["prettier", "react-hooks"],
