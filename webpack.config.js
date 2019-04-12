@@ -1,5 +1,10 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+
+const bundleAnalyzerPlugin = new BundleAnalyzerPlugin({
+    openAnalyzer: false
+});
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: './src/public/index.html',
@@ -87,7 +92,7 @@ module.exports = {
             }
         ]
     },
-    plugins: [htmlWebpackPlugin],
+    plugins: [htmlWebpackPlugin, bundleAnalyzerPlugin],
     devServer: {
         historyApiFallback: true
     },
