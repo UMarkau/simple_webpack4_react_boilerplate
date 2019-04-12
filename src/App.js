@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {getCounter} from './store/reducers';
 import {counterUp, counterDown} from './store/actions';
 import styles from './App.module.scss';
+import slowpoke from './assets/images/slowpoke.png';
 
 const App = ({counter, counterUp, counterDown}) => {
     const [text] = useState('Hello from the App!');
@@ -19,6 +20,7 @@ const App = ({counter, counterUp, counterDown}) => {
                 </button>
                 <button onClick={counterDown}>Counter DOWN</button>
             </div>
+            <img src={slowpoke} alt="hello" />
         </>
     );
 };

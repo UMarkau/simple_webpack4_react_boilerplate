@@ -29,7 +29,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src/index.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
+        filename: 'js/[name].[contenthash].js',
         publicPath: '/'
     },
     optimization: {
@@ -63,6 +63,18 @@ module.exports = {
             {
                 test: /\.module\.scss$/,
                 use: ['style-loader', CSSModuleLoader, 'postcss-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jp(e*)g|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                            name: 'images/[hash]-[name].[ext]'
+                        }
+                    }
+                ]
             }
         ]
     },
