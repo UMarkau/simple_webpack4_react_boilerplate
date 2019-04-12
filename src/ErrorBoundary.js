@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+/**
+ * At the moment, implementation through hooks for error boundary is not possible:
+ * https://reactjs.org/docs/hooks-faq.html#do-hooks-cover-all-use-cases-for-classes.
+ */
 export default class ErrorBoundary extends React.Component {
     state = {
         hasError: false
