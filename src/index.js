@@ -6,6 +6,7 @@ import {BrowserRouter} from 'react-router-dom';
 import store from './store/store';
 import App from './App';
 import ErrorBoundary from './ErrorBoundary';
+import './index.css';
 
 ReactDOM.render(
     <Provider store={store}>
